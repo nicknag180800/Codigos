@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script type="text/javascript" src="Teste 1 V1 - Nicolas Ariel.js"></script>
+            <link rel="stylesheet" type="text/css" href="Teste 1 V1 - Nicolas Ariel.css">
+        </head>
+
+            <body>
+                <!--Caculadora KeyBoard Questao 3-->
+                <div class="calculador_Keyboard">
+                    <table>
+                        <p id="result" aria-readonly="true"></p>
+                        <tr>
+                            <!--C = Limpar, no qual coloquei no lugar o Num Lock apenas para testar a funçao de Limpar e caso voce queria fazer uma conta nova-->
+                            <td><button class="Key" onclick="limpeza('C')">C</button></td>
+                            <td><button class="Key" onclick="inserir('/')">/</button></td>
+                            <td><button class="Key" onclick="inserir('*')">*</button></td>
+                            <td><button class="Key" onclick="inserir('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="Key" onclick="inserir('7')">7</button></td>
+                            <td><button class="Key" onclick="inserir('8')">8</button></td>
+                            <td><button class="Key" onclick="inserir('9')">9</button></td>
+                            <td rowspan="2"><button class="Key" style="height: 85px;" onclick="inserir('+')">+</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="Key" onclick="inserir('4')">4</button></td>
+                            <td><button class="Key" onclick="inserir('5')">5</button></td>
+                            <td><button class="Key" onclick="inserir('6')">6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="Key" onclick="inserir('1')">1</button></td>
+                            <td><button class="Key" onclick="inserir('2')">2</button></td>
+                            <td><button class="Key" onclick="inserir('3')">3</button></td>
+                            <!-- Ent = Enter-->
+                            <td rowspan="2"><button class="Key" style="height: 85px;" onclick="calculo()">Ent</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="Key"style="width: 90px;" onclick="inserir('0')">0</button></td>
+                            <td><button class="Key" onclick="inserir('.')">.</button></td>
+                        </tr>
+                    </table>
+                    
+
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <!--Caculadora Simples Questao 1-->
+                <form name="calculoS" method="post" action="">
+                        <label for="oper">Operacao:</label>
+                        <select name="operacao" id="operacao">
+                            <option value="so">+</option>
+                            <option value="sub">-</option>
+                            <option value="mult">*</option>
+                            <option value="div">/</option>
+                         </select>
+                            <br>
+                       <label for="numero1">Digite o valor 1: </label>
+                       <input type="text" name="numero1" id="numero1"/>
+                            <br>
+                       <label for="numero2">Digite o valor 2: </label>
+                       <input type="text" name="numero2" id="numero2"/>
+                            <br>   
+                       <label for="resultadoTotal">Resultado:</label>
+                       <input type="text" name="resultadoTotal" id="resultadoTotal" />
+                            <br>
+                       <input type="button" value="Calcular" class="botao" onClick="calcular(document.calculoS.operacao.value)"/>
+                 </form>
+
+
+            </body>
+
+    </html>
